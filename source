@@ -14,7 +14,7 @@ int main() {
    double totCost;
    double salesTax;
    
-   cout << "Enter in the wall heihgt: " << endl;
+   cout << "Enter in the wall height: " << endl;
       cin >> wallHeight;
    cout << "Enter in the wall width: " << endl;
       cin >> wallWidth;
