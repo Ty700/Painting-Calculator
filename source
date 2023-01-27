@@ -1,0 +1,40 @@
+#include <iostream>
+#include <iomanip>              
+#include <cmath>                
+using namespace std;
+
+int main() {
+   double wallWidth;
+   double wallHeight;
+   double wallArea;
+   double totGallons;
+   int totCans;
+   double canCost;
+   double totCostCans; // # of cans needed * cost of each can
+   double totCost;
+   double salesTax;
+   
+   cout << "Enter in the wall heihgt: " << endl;
+      cin >> wallHeight;
+   cout << "Enter in the wall width: " << endl;
+      cin >> wallWidth;
+   cout << "Enter in the cost per paint can: ";
+      cin >> canCost;
+   
+   wallArea = wallWidth * wallHeight; // Calculates wall area
+   totGallons = wallArea / 350.0; // Total gallons used
+   totCans = ceil(totGallons); //Finds the total number of cans by rounding up gallons used
+   
+   totCostCans = totCans * canCost; // # of cans * cost of each can 
+   salesTax = totCostCans*0.07;
+   totCost = totCostCans + (totCostCans*0.07); //Calculates tax and adds it to price.
+   
+   cout << fixed << setprecision(1)<< "Wall area: " << wallArea << " sq ft" << endl;
+   cout << fixed << setprecision(3) << "Paint needed: " << totGallons << " gallons" << endl;
+   cout << "Cans needed: " << totCans << " can(s)" << endl;
+   cout << fixed << setprecision(2) << "Paint cost: $" << totCostCans << endl;
+   cout << "Sales tax: $" << salesTax << endl;
+   cout << "Total cost: $" << totCost << endl;
+   
+   return 0;
+}
