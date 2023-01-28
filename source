@@ -1,3 +1,9 @@
+/*
+* Description: Gives the total cost to paint a wall given the wall height, width, and cost of each paint can.
+* Author: Tyler Scotti
+*/
+
+
 #include <iostream>
 #include <iomanip>              
 #include <cmath>                
