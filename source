@@ -1,5 +1,5 @@
 /*
-* Description: Gives the total cost to paint a wall given the wall height, width, and cost of each paint can.
+* Description: Gives the total cost to paint a wall given the wall height, width, and cost of each paint can. Assuming each paint can covers 350 sqft.
 * Author: Tyler Scotti
 */
 
@@ -19,16 +19,17 @@ int main() {
    double totCostCans; // # of cans needed * cost of each can
    double totCost;
    double salesTax;
+   const double PAINT_COVERAGE = 350; //Change value based on your paint's average coverage per can.
    
-   cout << "Enter in the wall height: " << endl;
+   cout << "Enter in the wall height: ";
       cin >> wallHeight;
-   cout << "Enter in the wall width: " << endl;
+   cout << "Enter in the wall width: ";
       cin >> wallWidth;
    cout << "Enter in the cost per paint can: ";
       cin >> canCost;
    
    wallArea = wallWidth * wallHeight; // Calculates wall area
-   totGallons = wallArea / 350.0; // Total gallons used
+   totGallons = wallArea / PAINT_COVERAGE; // Total gallons used Note: Assuming each paint can cover 350 sqft. Change value based on your paint coverage.
    totCans = ceil(totGallons); //Finds the total number of cans by rounding up gallons used
    
    totCostCans = totCans * canCost; // # of cans * cost of each can 
